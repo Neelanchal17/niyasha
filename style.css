@@ -1,0 +1,308 @@
+* {
+    background-color: #e9eaf8;
+    font-family: sans-serif;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1.2rem;
+}
+
+p {
+    font-size: 1.3em;
+}
+
+
+.mainText {
+    padding-top: 2rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    display: flex;
+
+    align-items: stretch;
+}
+
+.onehalf {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 40vw;
+    margin: 10px;
+    padding: 30px;
+}
+
+.secondhalf {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 50vw;
+    margin: 1.4em;
+    padding: 1.4em;
+}
+
+#intro {
+    text-emphasis-style: bold;
+    font-size: 2rem;
+}
+
+#logo-img {
+    z-index: 1;
+    height: 10em;
+    width: 10em;
+}
+
+.vl {
+    border-left: solid #894EFF;
+    padding-left: 4px;
+    padding-right: 4px;
+    margin-bottom: 5px;
+    margin-top: 20px;
+    max-height: 22em;
+}
+
+.vl-img {
+    margin-left: 8px;
+    min-height: 22em;
+}
+
+.heading-text {
+    color: #894EFF;
+}
+
+.highlights {
+    display: flex;
+    align-items: center;
+    padding: 3em;
+}
+
+.high-img {
+    max-height: 45vh;
+    max-width: 30vw;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    transition: 0.5s;
+}
+
+.high-img:hover {
+    box-shadow: 5px 10px #894EFF;
+
+}
+
+h2 {
+    padding-left: 50px;
+    padding-bottom: none;
+}
+
+h3 {
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    padding-left: 0.5em;
+
+}
+
+/* ------------------------ */
+/* viewports */
+/* ------------------------ */
+@media only screen and (max-width: 1000px) {
+    .vl {
+        display: none;
+    }
+
+    .mainText {
+        display: grid;
+    }
+
+    .highlights {
+        display: grid;
+        align-items: center;
+    }
+
+    .high-img {
+        min-height: 12rem;
+        min-width: 15rem;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    #left-header {
+        display: none;
+    }
+
+    #right-header {
+        display: none;
+    }
+    #slider {
+        display: none;
+    }
+
+
+}
+
+.donate {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.donate-button {
+    min-width: 20rem;
+    background-color: white;
+    color: #894EFF;
+    border: none;
+    box-shadow: 5px 10px #894EFF;
+    transition: 0.5s;
+    padding: 1.2rem;
+}
+
+.donate-button:hover {
+    background-color: #894EFF;
+    color: white;
+    box-shadow: none;
+}
+
+/* ------------------------------- */
+/* slideshow */
+/* ------------------------------- */
+
+
+
+/* 
+
+@keyframes slidy {
+    0% {
+        left: 0%;
+    }
+    5% {
+        left: 0%
+    }
+    10% {
+        left: -20%
+    }
+
+    20% {
+        left: -75%;
+    }
+
+    25% {
+        left: -100%;
+    }
+
+    45% {
+        left: -100%;
+    }
+
+    50% {
+        left: -200%;
+    }
+
+    70% {
+        right: -200%;
+    }
+
+    75% {
+        right: -300%;
+    }
+
+    95% {
+        right: -300%;
+    }
+
+    100% {
+        right: -300%
+    }
+}
+
+
+
+
+div#slider figure img {
+    width: 20%;
+    float: left;
+}
+
+div#slider figure {
+    position: relative;
+    width: 200%;
+    margin: 1.4em;
+    left: 10px;
+    right:20px;
+    text-align: left;
+    font-size: 0;
+    animation: 25s slidy infinite;
+}
+ */
+
+
+ @keyframes slidy {
+    0% {
+        left: 0%;
+    }
+    5% {
+        left: 0%;
+    }
+    10% {
+        left: -100%;
+    }
+    20% {
+        left: -100%;
+    }
+    25% {
+        left: -205%;
+    }
+    45% {
+        left: -205%;
+    }
+    50% {
+        left: -100%;
+    }
+    70% {
+        left: -100%;
+    }
+    75% {
+        left: -0%;
+    }
+    100% {
+        left: -0%;
+    }
+
+}
+
+/* Container for the slider */
+div#slider {
+    width: 100%;
+    max-width: 600px;
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+    border-radius: 10px;
+}
+
+/* Image holder */
+div#slider figure {
+    display: flex;
+    width: 500%; /* Total width for 5 images */
+    margin: 0;
+    position: relative;
+    animation: slidy 25s infinite ease-in-out;
+}
+
+/* Image settings */
+div#slider figure img {
+    width: 20%; /* 5 images in total */
+    object-fit: cover;
+    flex-shrink: 0;
+    padding-right: 10px; /* Add padding between images */
+}
